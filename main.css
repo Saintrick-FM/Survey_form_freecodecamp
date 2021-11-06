@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Patua One;
+    font-weight: 200;
+}
+
+
+/*
+
+
+body {
+    padding: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    background: linear-gradient(90deg, rgb(64, 0, 0), violet, black);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3em;
+    height: 100vh;
+}*/
+
+#main {
+    /* background-image: url("images/pexels-paul-basel-2208967.jpg") */
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #ebecf0;
+}
+
+#part_left {
+    background: linear-gradient(90deg, rgba(249, 184, 184, 0.5), rgba(238, 130, 238, 0.5), rgba(10, 10, 10, 0.5));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*permet de recentrer les éléments de la ligne au centre sur l'axe x(à l'horizontal)*/
+    align-items: center;
+    width: 40%;
+    border: solid 1px white;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+    justify-items: center;
+    /*permet de recentrer les éléments de la ligne au centre sur l'axe y(à la verticale)*/
+    box-shadow: inset 2px 2px 5px rgba(10, 10, 10, 0.5), inset -8px -8px 10px rgba(10, 10, 10, 0.5);
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+}
+
+#title {
+    padding: 0 20px;
+}
+
+#description {
+    padding: 0 20px;
+}
+
+#part_right {
+    padding: 20px;
+    width: 60%;
+    overflow-y: scroll;
+    background-color: #ebecf0;
+    outline: 0;
+    border: 0;
+}
+
+button,
+input,
+select {
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 320px;
+    padding: 16px;
+    background-color: #ebecf0;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+textarea {
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 40px;
+    padding: 16px;
+    background-color: #ebecf0;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+input,
+textarea,
+select {
+    margin-bottom: 24px;
+    box-shadow: inset 2px 2px 5px #babecc, inset -8px -8px 10px #fff;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+}
+
+input:focus {
+    box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+
+textarea:focus {
+    box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+
+button {
+    color: #61677c;
+    box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#survey-form {
+    padding: 50px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    box-shadow: 2px 2px 5px #babecc, -8px -8px 10px #fff;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+}
+
+.label_and_input {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.label {
+    padding: 0 0 5px 20px;
+}

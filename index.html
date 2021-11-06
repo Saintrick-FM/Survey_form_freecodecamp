@@ -6,13 +6,97 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Survey form freecodecamp</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
 </head>
 
 <body>
-    <h1>My Survey form project</h1>
+    <div id="main">
 
+        <div id="part_left">
+            <h1 id="title"> FreeCodeCamp Survey Form </h1>
+            <p id="description"> Thank you for taking the time to help us improve the platform</p>
+        </div>
+
+        <div id="part_right">
+
+            <form id="survey-form" action="">
+
+                <div class="label_and_input">
+                    <label for="name" id="name-label" class="label">Name</label>
+                    <input id="name" name="name" placeholder="Enter your name" required type="text">
+                </div>
+
+                <div class="label_and_input">
+                    <label for="email" id="email-label" class="label">Email</label>
+                    <input id="email" name="email" placeholder="Enter your email " required type="email">
+                </div>
+
+                <div class="label_and_input">
+                    <label for="number" id="number-label" class="label">Age</label>
+                    <input id="number" name="age" placeholder="Age" required type="number">
+                </div>
+
+                <div class="label_and_input">
+                    <label for="occupation" class="label">Which option best describes your current role?</label>
+                    <select name="occupation" id="occupation">
+        
+                            <option >Student</option>
+                            <option> Full Time Job</option>
+                            <option>Full Time Learner</option>
+                            <option>Prefer not to say</option>
+                            <option>Other</option>
+                            
+                        </select>
+                </div>
+
+                <div class="label_and_input">
+                    <label for="recommand_freecodecamp" class="label">Would you recommend freeCodeCamp to a friend?</label>
+                    <input id="name" required type="radio">
+                </div>
+
+                <div class="label_and_input">
+                    <label for="favorite_feature" class="label">What is your favorite feature of freeCodeCamp?</label>
+                    <select name="favorite_feature" id="favorite_feature">
+        
+                            <option >Challenges</option>
+                            <option>Projects</option>
+                            <option>Community</option>
+                            <option>Open Source</option>
+                            
+                            
+                        </select>
+                </div>
+
+                <div class="label_and_input">
+                    <label for="name" class="label"></label>
+                    <input id="name" required type="checkbox">
+                </div>
+
+                <div class="label_and_input">
+                    <label for="improvements" class="label">What would you like to see improved? <span>(Check all that apply)</span> </label>
+                    <input id="improvements" required type="checkbox">
+                </div>
+
+                <div>
+
+
+                    <label for="comments" class="label">Any comments or suggestions?</label>
+                    <textarea name="comments" id="comments" cols="30" id="comments" rows="10"></textarea>
+                </div>
+                <button type="submit"> Submit</button>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script src='main.js'></script>
 </body>
 
 </html>
