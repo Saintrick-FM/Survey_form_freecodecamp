@@ -1,1 +1,0 @@
-// document.getElementsByClassName("checkbox_choice")
