@@ -7,6 +7,8 @@
     <title>Survey form freecodecamp</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1200e00e4a.js" crossorigin="anonymous"></script>
+
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 </head>
 
@@ -34,12 +36,13 @@
 
                 <div class="label_and_input">
                     <label for="number" id="number-label" class="label">Age</label>
-                    <input id="number" name="age" placeholder="Age" required type="number">
+                    <input id="number" name="age" min="1" max="4" placeholder="Age" required type="number">
                 </div>
 
                 <div class="label_and_input">
-                    <label for="occupation" class="label">Which option best describes your current role?</label>
-                    <select name="occupation" id="occupation">
+                    <label for="occupation" class="label">Which option best describes your current role ?</label>
+                    <div class="select">
+                        <select name="occupation" id="occupation">
         
                             <option >Student</option>
                             <option> Full Time Job</option>
@@ -48,6 +51,10 @@
                             <option>Other</option>
                             
                         </select>
+                        <i class="fas fa-caret-down"></i>
+
+                    </div>
+
                 </div>
 
                 <div class="label_and_input">
@@ -58,7 +65,7 @@
                 <div class="label_and_input">
                     <label for="favorite_feature" class="label">What is your favorite feature of freeCodeCamp?</label>
                     <select name="favorite_feature" id="favorite_feature">
-        
+                        <option value="" disabled>--Please choose an option--</option>
                             <option >Challenges</option>
                             <option>Projects</option>
                             <option>Community</option>
@@ -68,23 +75,75 @@
                         </select>
                 </div>
 
+
                 <div class="label_and_input">
-                    <label for="name" class="label"></label>
-                    <input id="name" required type="checkbox">
+                    <legend>What would you like to see improved ? <span class="fas fa user">(Check all that apply)</span></legend>
+                    <div class="checkbox">
+                        <input id="frontend_projects" class="checkbox_choice" type="checkbox" class="checkbox_choice">
+                        <label for="frontend_projects" class="label">Front-end Projects </label>
+
+                    </div>
+                    <div class="checkbox">
+                        <input id="backend_projects" required type="checkbox" class="checkbox_choice">
+                        <label for="backend_projects" class="label">Back-end Projects </label>
+
+                    </div>
+                    <div class="checkbox">
+                        <input id="data_visualisation" required type="checkbox" class="checkbox_choice">
+                        <label for="data_visualisation" class="label">Data Visualization </label>
+
+                    </div>
+                    <div class="checkbox">
+                        <input id="challenges" required type="checkbox" class="checkbox_choice">
+                        <label for="challenges" class="label">Challenges</label>
+
+                    </div>
+                    <div class="checkbox">
+                        <input id="open_source" required type="checkbox" class="checkbox_choice">
+                        <label for="open_source" class="label">Open Source Community </label>
+
+                    </div>
+                    <div class="checkbox">
+                        <input id="help_rooms" required type="checkbox" class="checkbox_choice">
+                        <label for="help_rooms" class="label">Gitter help rooms</label>
+
+                    </div>
+                    <div class="checkbox">
+                        <input id="videos" required type="checkbox" class="checkbox_choice">
+                        <label for="videos" class="label">Videos </label>
+
+                    </div>
+                    <div class="checkbox">
+                        <input id="improvements" required type="checkbox" class="checkbox_choice">
+                        <label for="city_Meetups" class="label">City Meetups</label>
+
+                    </div>
+                    <div class="checkbox">
+                        <input id="wiki" required type="checkbox" class="checkbox_choice">
+                        <label for="wiki" class="label">Wiki</label>
+
+                    </div>
+                    <div class="checkbox">
+                        <input id="forums" required type="checkbox" class="checkbox_choice">
+                        <label for="forums" class="label">Forums</label>
+
+                    </div>
+                    <div class="checkbox">
+                        <input id="additionnal_courses" required type="checkbox" class="checkbox_choice">
+                        <label for="additionnal_courses" class="label">Additionnal courses</label>
+
+                    </div>
+
+
                 </div>
 
                 <div class="label_and_input">
-                    <label for="improvements" class="label">What would you like to see improved? <span>(Check all that apply)</span> </label>
-                    <input id="improvements" required type="checkbox">
-                </div>
-
-                <div>
 
 
                     <label for="comments" class="label">Any comments or suggestions?</label>
                     <textarea name="comments" id="comments" cols="30" id="comments" rows="10"></textarea>
                 </div>
-                <button type="submit"> Submit</button>
+                <button type="submit" id="submit"> Submit</button>
 
 
             </form>

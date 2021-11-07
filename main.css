@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     font-family: Patua One;
-    font-weight: 200;
 }
 
 
@@ -29,7 +28,7 @@ body {
 }
 
 #part_left {
-    background: linear-gradient(90deg, rgba(249, 184, 184, 0.5), rgba(238, 130, 238, 0.5), rgba(10, 10, 10, 0.5));
+    /* background: linear-gradient(90deg, rgba(249, 184, 184, 0.5), rgba(238, 130, 238, 0.5), rgba(10, 10, 10, 0.5)); */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,14 +44,22 @@ body {
     box-sizing: border-box;
     transition: all 0.2s ease-in-out;
     appearance: none;
+    background: url("images/uhoOge.jpg");
+    z-index: 1;
 }
 
 #title {
     padding: 0 20px;
+    text-shadow: -10px -10px 30px rgba(204, 138, 17, 0.8);
+    z-index: 3;
 }
 
 #description {
     padding: 0 20px;
+    text-shadow: 0px 0px 20px #ebecf0;
+    font-size: 17px;
+    font-weight: 5px;
+    z-index: 3;
 }
 
 #part_right {
@@ -62,6 +69,7 @@ body {
     background-color: #ebecf0;
     outline: 0;
     border: 0;
+    z-index: 2;
 }
 
 button,
@@ -90,11 +98,37 @@ input,
 textarea,
 select {
     margin-bottom: 24px;
+    padding-left: 20px;
     box-shadow: inset 2px 2px 5px #babecc, inset -8px -8px 10px #fff;
     width: 100%;
     box-sizing: border-box;
     transition: all 0.2s ease-in-out;
     appearance: none;
+    color: rgb(41, 39, 39, 0.5);
+}
+
+::placeholder {
+    font-size: 1em;
+    font-weight: lighter;
+}
+
+.select {
+    display: flex;
+    justify-content: space-between;
+}
+
+label,
+legend {
+    font-size: 18px
+}
+
+legend {
+    padding: 0px 0px 10px 20px;
+}
+
+.checkbox {
+    display: grid;
+    grid-template-columns: 10% 90%;
 }
 
 input:focus {
@@ -102,6 +136,10 @@ input:focus {
 }
 
 textarea:focus {
+    box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+
+select:focus {
     box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
 }
 
@@ -117,11 +155,12 @@ button {
     padding: 50px;
     border-radius: 20px;
     margin-bottom: 24px;
-    box-shadow: 2px 2px 5px #babecc, -8px -8px 10px #fff;
+    box-shadow: 13px 13px 20px #babecc, -12px -12px 12px #fff;
     width: 100%;
     box-sizing: border-box;
     transition: all 0.2s ease-in-out;
     appearance: none;
+    width: 100%;
 }
 
 .label_and_input {
@@ -132,4 +171,53 @@ button {
 
 .label {
     padding: 0 0 5px 20px;
+}
+
+@media screen and (max-width:600px) {
+    body {
+        overflow: scroll;
+    }
+    #main {
+        /* background-image: url("images/pexels-paul-basel-2208967.jpg") */
+        display: flex;
+        flex-direction: column;
+        background-color: #ebecf0;
+        overflow: hidden;
+        height: auto;
+    }
+    #part_left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: auto;
+        border-radius: 0px;
+        position: relative;
+        height: auto;
+        margin: 10px 15px 5px 15px;
+        overflow: hidden;
+        border-radius: 40px;
+        padding: 10px;
+        opacity: 0.8;
+    }
+    #part_right {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        margin: 10px 15px 5px 15px;
+        padding: 5px;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .label {
+        font-weight: 100;
+    }
+    button,
+    input,
+    select {
+        border-radius: 320px;
+        font-weight: lighter;
+    }
+    textarea {
+        font-size: 10px;
+    }
 }
