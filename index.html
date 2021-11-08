@@ -17,7 +17,7 @@
 
         <div id="part_left">
             <h1 id="title"> FreeCodeCamp Survey Form </h1>
-            <p id="description"> Thank you for taking the time to help us improve the platform</p>
+            <p id="description"> Thank you for taking the time to help us improve the platform.</p>
         </div>
 
         <div id="part_right">
@@ -36,11 +36,11 @@
 
                 <div class="label_and_input">
                     <label for="number" id="number-label" class="label">Age</label>
-                    <input id="number" name="age" min="1" max="4" placeholder="Age" required type="number">
+                    <input id="number" name="age" min="1" max="99" placeholder="Age" required type="number">
                 </div>
 
                 <div class="label_and_input">
-                    <label for="dropdown" class="label">Which option best describes your current role ?</label>
+                    <label for="dropdown" class="label long_sentence">Which option best describes your current role ?</label>
                     <div class="select">
                         <select name="occupation" id="dropdown">
                             <option disabled selected>Select an option</option>
@@ -62,29 +62,30 @@
                 </div>
 
                 <div class="label_and_input">
-                    <label class="label">Would you recommend freeCodeCamp to a friend?</label>
+                    <label class="label long_sentence">Would you recommend freeCodeCamp to a friend?</label>
 
                     <div class="radio">
                         <input id="frontend_projects" name="user_recommend" value="Definitely" selected class="checkbox_choice" type="radio">
-                        <label for="frontend_projects" class="label">Definitely </label>
+                        <label for="frontend_projects" class="label_radio">Definitely </label>
                     </div>
                     <div class="radio">
                         <input id="second_radio" name="user_recommend" value="May be" required type="radio" class="checkbox_choice">
-                        <label for="second_radio" class="label">May be </label>
+                        <label for="second_radio" class="label_radio">May be </label>
 
                     </div>
                     <div class="radio">
                         <input id="third_radio" name="user_recommend" value="Not sure" required type="radio" class="checkbox_choice">
-                        <label for="third_radio" class="label">Not sure </label>
+                        <label for="third_radio" class="label_radio">Not sure </label>
 
                     </div>
                 </div>
 
                 <div class="label_and_input select">
-                    <label for="favorite_feature" class="label">What is your favorite feature of freeCodeCamp?</label>
+                    <label for="favorite_feature" class="label long_sentence">What is your favorite feature of freeCodeCamp?</label>
+
                     <div class="select">
-                        <select name="favorite_feature" id="favorite_feature">
-                            <option disabled selected>Please select an option</option>
+                        <select name="favorite_feature" id="favorite_feature" required>
+                            <option disabled>Please select an option</option>
                                 <option >Challenges</option>
                                 <option>Projects</option>
                                 <option>Community</option>
@@ -102,7 +103,7 @@
 
 
                 <div>
-                    <label class="label_checkbox"> What would you like to see improved ? <span class="span">(Check all that apply)</span></label>
+                    <label class="label_checkbox long_sentence"> What would you like to see improved ? <span class="span">(Check all that apply)</span></label>
 
                     <label class="first_checkbox">
                         <input name="user_preference"  class="checkbox_input"  type="checkbox" value="Front-end Projects">
@@ -165,10 +166,8 @@
                 </div>
 
                 <div class="label_and_input">
-
-
                     <label for="comments" class="label">Any comments or suggestions?</label>
-                    <textarea name="comments" id="comments" cols="30" id="comments" rows="10"></textarea>
+                    <textarea name="comments" id="comments" required cols="30" id="comments" rows="10"></textarea>
                 </div>
                 <button type="submit" id="submit"> Submit</button>
 

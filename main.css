@@ -4,21 +4,6 @@
     font-family: Patua One;
 }
 
-
-/*
-
-
-body {
-    padding: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    background: linear-gradient(90deg, rgb(64, 0, 0), violet, black);
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.3em;
-    height: 100vh;
-}*/
-
 #main {
     /* background-image: url("images/pexels-paul-basel-2208967.jpg") */
     display: flex;
@@ -61,6 +46,7 @@ body {
     font-weight: 5px;
     z-index: 3;
     font-style: italic;
+    text-align: justify;
 }
 
 #part_right {
@@ -142,26 +128,36 @@ legend {
     grid-template-columns: 10% 90%;
 }
 
-input:not([type="checkbox"]):focus {
+input:not([type="checkbox"]):focus:not([type="radio"]) {
     box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+    background-color: ghostwhite;
+}
+
+input:not([type="checkbox"]):valid:not([type="radio"]) {
+    box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+    background-color: ghostwhite;
 }
 
 input[type="checkbox"]:checked {
     box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
-    background-color: rgba(173, 255, 47, 0.4)
+    background-color: ghostwhite
 }
 
+input[type="radio"]:focus,
 input[type="radio"]:checked {
-    box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
-    background-color: rgba(173, 255, 47, 0.4)
+    box-shadow: inset 1px 1px 2px #bcbec7, inset -1px -1px 2px #fff;
+    background-color: ghostwhite
 }
 
-textarea:focus {
+textarea:focus,
+textarea:valid {
     box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+    background-color: ghostwhite;
 }
 
 select:focus {
     box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+    background-color: ghostwhite;
 }
 
 button {
@@ -197,6 +193,11 @@ button {
     padding: 0 0 15px 20px;
 }
 
+.label_radio {
+    padding: 0 0 15px 20px;
+    margin: 5px 0 0 20px;
+}
+
 .label_checkbox {
     padding: 0 0 15px 20px;
     margin-bottom: 10px;
@@ -211,6 +212,7 @@ button {
 
 .checkbox_input {
     width: 10%;
+    margin-top: -3px;
 }
 
 .first_checkbox {
@@ -271,10 +273,27 @@ button {
     select {
         border-radius: 320px;
         font-weight: lighter;
+        width: 100%;
+    }
+    .long_sentence {
+        font-size: 17px;
+        width: 100%;
+        margin: 0 -12px 0 -12px;
+        text-align: center;
     }
     textarea {
-        font-size: 10px;
+        font-size: 18px;
         margin-left: 5px;
         margin-right: 5px;
+        width: 100%;
+    }
+    .checkbox_input {
+        margin-top: 0px;
+    }
+    #title {
+        font-size: 25px;
+        text-shadow: -10px -10px 30px rgb(204 138 17 / 80%);
+        z-index: 3;
+        text-align: center;
     }
 }
