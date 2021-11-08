@@ -40,11 +40,12 @@
                 </div>
 
                 <div class="label_and_input">
-                    <label for="occupation" class="label">Which option best describes your current role ?</label>
+                    <label for="dropdown" class="label">Which option best describes your current role ?</label>
                     <div class="select">
-                        <select name="occupation" id="occupation">
+                        <select name="occupation" id="dropdown">
+                            <option disabled selected>Select an option</option>
         
-                            <option >Student</option>
+                            <option>Student</option>
                             <option> Full Time Job</option>
                             <option>Full Time Learner</option>
                             <option>Prefer not to say</option>
@@ -61,19 +62,19 @@
                 </div>
 
                 <div class="label_and_input">
-                    <label for="recommand_freecodecamp" class="label">Would you recommend freeCodeCamp to a friend?</label>
+                    <label class="label">Would you recommend freeCodeCamp to a friend?</label>
 
-                    <div class="checkbox">
-                        <input id="frontend_projects" class="checkbox_choice" type="radio" class="checkbox_choice">
+                    <div class="radio">
+                        <input id="frontend_projects" name="user_recommend" value="Definitely" selected class="checkbox_choice" type="radio">
                         <label for="frontend_projects" class="label">Definitely </label>
                     </div>
-                    <div class="checkbox">
-                        <input id="second_radio" required type="radio" class="checkbox_choice">
+                    <div class="radio">
+                        <input id="second_radio" name="user_recommend" value="May be" required type="radio" class="checkbox_choice">
                         <label for="second_radio" class="label">May be </label>
 
                     </div>
-                    <div class="checkbox">
-                        <input id="third_radio" required type="radio" class="checkbox_choice">
+                    <div class="radio">
+                        <input id="third_radio" name="user_recommend" value="Not sure" required type="radio" class="checkbox_choice">
                         <label for="third_radio" class="label">Not sure </label>
 
                     </div>
@@ -83,7 +84,7 @@
                     <label for="favorite_feature" class="label">What is your favorite feature of freeCodeCamp?</label>
                     <div class="select">
                         <select name="favorite_feature" id="favorite_feature">
-                            <option value="" disabled>Please select an option</option>
+                            <option disabled selected>Please select an option</option>
                                 <option >Challenges</option>
                                 <option>Projects</option>
                                 <option>Community</option>
@@ -100,63 +101,65 @@
                 </div>
 
 
-                <div class="label_and_input">
-                    <legend>What would you like to see improved ? <span class="fas fa user">(Check all that apply)</span></legend>
-                    <div class="checkbox">
-                        <input id="frontend_projects" class="checkbox_choice" type="checkbox" class="checkbox_choice">
-                        <label for="frontend_projects" class="label">Front-end Projects </label>
+                <div>
+                    <label class="label_checkbox"> What would you like to see improved ? <span class="span">(Check all that apply)</span></label>
 
-                    </div>
-                    <div class="checkbox">
-                        <input id="backend_projects" required type="checkbox" class="checkbox_choice">
-                        <label for="backend_projects" class="label">Back-end Projects </label>
+                    <label class="first_checkbox">
+                        <input name="user_preference"  class="checkbox_input"  type="checkbox" value="Front-end Projects">
+                        <span class="checkmark" ></span>
+                        Front-end Projects
+                        </label>
+                    <label class="checkbox">
+                        <input name="user_preference"  class="checkbox_input"  type="checkbox" value="Back-end Projects">
+                        <span class="checkmark" ></span>
+                        Back-end Projects
+                        </label>
 
-                    </div>
-                    <div class="checkbox">
-                        <input id="data_visualisation" required type="checkbox" class="checkbox_choice">
-                        <label for="data_visualisation" class="label">Data Visualization </label>
-
-                    </div>
-                    <div class="checkbox">
-                        <input id="challenges" required type="checkbox" class="checkbox_choice">
-                        <label for="challenges" class="label">Challenges</label>
-
-                    </div>
-                    <div class="checkbox">
-                        <input id="open_source" required type="checkbox" class="checkbox_choice">
-                        <label for="open_source" class="label">Open Source Community </label>
-
-                    </div>
-                    <div class="checkbox">
-                        <input id="help_rooms" required type="checkbox" class="checkbox_choice">
-                        <label for="help_rooms" class="label">Gitter help rooms</label>
-
-                    </div>
-                    <div class="checkbox">
-                        <input id="videos" required type="checkbox" class="checkbox_choice">
-                        <label for="videos" class="label">Videos </label>
-
-                    </div>
-                    <div class="checkbox">
-                        <input id="improvements" required type="checkbox" class="checkbox_choice">
-                        <label for="city_Meetups" class="label">City Meetups</label>
-
-                    </div>
-                    <div class="checkbox">
-                        <input id="wiki" required type="checkbox" class="checkbox_choice">
-                        <label for="wiki" class="label">Wiki</label>
-
-                    </div>
-                    <div class="checkbox">
-                        <input id="forums" required type="checkbox" class="checkbox_choice">
-                        <label for="forums" class="label">Forums</label>
-
-                    </div>
-                    <div class="checkbox">
-                        <input id="additionnal_courses" required type="checkbox" class="checkbox_choice">
-                        <label for="additionnal_courses" class="label">Additionnal courses</label>
-
-                    </div>
+                    <label class="checkbox">
+                        <input  name="user_preference"  class="checkbox_input"  type="checkbox" value="Data Visualization">
+                        <span class="checkmark" ></span>
+                        Data Visualization
+                        </label>
+                    <label class="checkbox">
+                        <input name="user_preference"  class="checkbox_input"  type="checkbox" value="Challenges">
+                        <span class="checkmark" ></span>
+                        Challenges
+                        </label>
+                    <label class="checkbox">
+                        <input name="user_preference"  class="checkbox_input"  type="checkbox" value="Open Source Community" >
+                        <span class="checkmark" ></span>
+                        Open Source Community
+                        </label>
+                    <label class="checkbox">
+                        <input name="user_preference"  class="checkbox_input"  type="checkbox" value="Gitter help rooms">
+                        <span class="checkmark" ></span>
+                        Gitter help rooms
+                        </label>
+                    <label class="checkbox">
+                        <input name="user_preference"  class="checkbox_input"  type="checkbox" value="Videos">
+                        <span class="checkmark" ></span>
+                        Videos
+                        </label>
+                    <label class="checkbox">
+                        <input name="user_preference"  class="checkbox_input"  type="checkbox" value="City Meetups">
+                        <span class="checkmark" ></span>
+                        City Meetups
+                        </label>
+                    <label class="checkbox">
+                        <input name="user_preference"  class="checkbox_input"  type="checkbox" value="Wiki">
+                        <span class="checkmark" ></span>
+                        Wiky
+                        </label>
+                    <label class="checkbox">
+                        <input name="user_preference"  class="checkbox_input" type="checkbox" value="Firums">
+                        <span class="checkmark" ></span>
+                        Forums
+                        </label>
+                    <label class="checkbox">
+                        <input name="user_preference"  class="checkbox_input" type="checkbox" value="Additional Courses">
+                        <span class="checkmark" ></span>
+                        Additional Courses
+                        </label>
 
 
                 </div>

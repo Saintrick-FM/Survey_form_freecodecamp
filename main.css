@@ -58,9 +58,9 @@ body {
     padding: 0 20px;
     text-shadow: 0px 0px 20px #ebecf0;
     font-size: 17px;
-    letter-spacing: 1px;
     font-weight: 5px;
     z-index: 3;
+    font-style: italic;
 }
 
 #part_right {
@@ -137,7 +137,7 @@ legend {
     padding: 0px 0px 10px 20px;
 }
 
-.checkbox {
+.radio {
     display: grid;
     grid-template-columns: 10% 90%;
 }
@@ -170,6 +170,9 @@ button {
     transition: all 0.2s ease-in-out;
     cursor: pointer;
     font-weight: 600;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
 }
 
 #survey-form {
@@ -191,7 +194,38 @@ button {
 }
 
 .label {
-    padding: 0 0 5px 20px;
+    padding: 0 0 15px 20px;
+}
+
+.label_checkbox {
+    padding: 0 0 15px 20px;
+    margin-bottom: 10px;
+}
+
+.checkbox,
+.first_checkbox {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+}
+
+.checkbox_input {
+    width: 10%;
+}
+
+.first_checkbox {
+    margin-top: 18px;
+}
+
+.checkmark {
+    float: inline-start;
+    margin-left: 20px;
+}
+
+.span {
+    font-size: medium;
+    font-weight: lighter;
+    color: rgb(31, 28, 28, 0.7);
 }
 
 @media screen and (max-width:600px) {
@@ -240,5 +274,7 @@ button {
     }
     textarea {
         font-size: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
     }
 }
